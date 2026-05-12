@@ -1,6 +1,6 @@
 return {
     {
-        "folke/tokyonight.nvim" 
+        "folke/tokyonight.nvim"
     },
     {
         "mason-org/mason.nvim",
@@ -28,6 +28,10 @@ return {
         build = ":TSUpdate"
     },
     {
+        'nvim-treesitter/nvim-treesitter-context',
+        dependencies = { 'nvim-treesitter/nvim-treesitter' }
+    },
+    {
         "nvim-tree/nvim-tree.lua",
         version = "*",
         lazy = false,
@@ -50,5 +54,27 @@ return {
         "nvim-tree/nvim-web-devicons",
         opts = {}
     },
+    {
+    'nvim-telescope/telescope.nvim', version = '*',
+    dependencies = {
+            'nvim-lua/plenary.nvim',
+            -- optional but recommended
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+        }
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    },
+    {
+      "gbprod/yanky.nvim",
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      },
+    }
 }
-

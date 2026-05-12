@@ -36,3 +36,19 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.enable("lua_ls")
+
+-- TypeSciprt
+vim.lsp.config("ts_ls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.enable("ts_ls")
+
+-- json
+vim.lsp.config("jsonls", {
+    capabilities = capabilities,
+})
+
+vim.lsp.enable("jsonls")
+
+

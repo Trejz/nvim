@@ -1,3 +1,13 @@
+require("tokyonight").setup({
+    style = "night",
+    on_colors = function(colors)
+    local bgcolor = "#0f111a"
+
+    colors.bg = bgcolor
+    colors.bg_dark = bgcolor
+  end,
+})
+
 vim.o.background = "dark"
 vim.cmd.colorscheme("tokyonight")
 
@@ -25,7 +35,7 @@ vim.opt.termguicolors = true
 vim.diagnostic.config({
   underline = true,
   virtual_text = true,
-  signs = true,
+  signs = false,
   update_in_insert = true,
 })
 
